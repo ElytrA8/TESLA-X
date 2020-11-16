@@ -7,8 +7,8 @@ import pexpect as pe
 API_ID = os.environ.get('API_ID')
 API_HASH = os.environ.get('API_HASH')
 SESSION = os.environ.get('SESSION')
-sfuser = os.environ.get('sfuser')
-sfpass = os.environ.get('sfpass')
+sfuser = os.environ.get('sfuser') or None
+sfpass = os.environ.get('sfpass') or None
 
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
                     level=logging.WARNING)
