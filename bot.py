@@ -116,7 +116,7 @@ async def gsi(event):
     if os.path.exists(f'{path}/working/output.txt'):
         await event.edit('`old output spotted!\n deleting...`')
         os.remove('output.txt')
-    gsi_making = f'cd {path};sudo chmod -R 0777 ErfanGSIs;cd ErfanGSIs;sudo bash setup.py;sudo ./url2GSI.sh {queue.pop(0)} {rom_name}'
+    gsi_making = f'sudo chmod -R 0777 ErfanGSIs;cd ErfanGSIs;sudo bash setup.py;sudo ./url2GSI.sh {queue.pop(0)} {rom_name}'
     output = await asyncio.create_subprocess_shell(
     gsi_making, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
     )
