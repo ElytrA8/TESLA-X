@@ -1,0 +1,4 @@
+telethon
+pyrogram
+requests
+pexpect
