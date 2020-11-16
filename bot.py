@@ -124,15 +124,15 @@ async def gsi(event):
     stdout, stderr = await output.communicate()
     out = str(stdout.decode()) + str(stderr.decode())
     if len(out) > 4096:
-        with open('outputt.txt', 'w+') as a:
+        with open('output.txt', 'w+') as a:
             a.write(out)
             await bot.send_file(
-            'outputt.txt',
+            'output.txt',
             event.chat_id,
             reply_to=event.id,
             caption='output was too big so it was sent as a file'
             )
-            os.remove(output.txt)
+            os.remove('output.txt')
     else:
         await event.respond(str(out))
     await event.edit('\n gsi zipping started')
