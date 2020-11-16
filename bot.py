@@ -4,12 +4,11 @@ from telethon.errors.rpcerrorlist import PhoneNumberInvalidError
 import sys, asyncio, os, logging, time, subprocess
 import pexpect as pe
 
-API_ID = os.getenv('API_ID')
-API_HASH = os.getnev('API_HASH')
-SESSION = os.getenv('SESSION')
+API_ID = os.environ.get('API_ID')
+API_HASH = os.environ.get('API_HASH')
+SESSION = os.environ.get('SESSION')
 sfuser = os.environ.get('sfuser')
-sfpass = None
-sfdir = None
+sfpass = os.environ.get('sfpass')
 
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
                     level=logging.WARNING)
