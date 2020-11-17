@@ -12,6 +12,6 @@ with TelegramClient(StringSession(), API_ID, API_HASH) as client:
 	    "Check your Telegram Saved Messages to copy the STRING_SESSION value")
 	session_str = client.session.save()
 	msg = client.send_message("me", session_str)
-	msg.reply("made by the ProjectCOCK gang")
+	msg.reply("made by the Project TESLA-X Program")
 
 print("all done,\n now check your telegram saved messages!")
