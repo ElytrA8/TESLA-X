@@ -70,7 +70,7 @@ async def on(event):
     f'`🐍 python_version`     {python_version()} 🐍\n'
     f'`💬 telethon_version`   {version.__version__} 💬\n'
     f'`🛠️ loaded_modules`      {len(help_list)}  🛠️)\n')
-    await bot.send_file(event.chat_id, 'https://telegra.ph/file/92a69b23614ed0122bb47.mp4', caption=msg)
+    await bot.send_file(event.chat_id, 'https://telegra.ph/file/10e23d6c15b3496965fb4.mp4', caption=msg)
 help_list.append(
 '`on/start`:\n checks the bot stats\n usage: `.on`\n\n'
 )
