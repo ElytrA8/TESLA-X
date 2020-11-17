@@ -1,9 +1,10 @@
-apt-get install expect
-expect -c "
+#!/bin/bash
+
+expect -c " 
 spawn sftp $sfuser@frs.sourceforge.net
 expect \"yes/no\"
 send \"yes\r\"
-expect \"Password\"
+expect \"Password\"        
 send \"$sfpass\r\"
 expect \"sftp> \"
 send \"cd $sfdir\r\"
@@ -13,3 +14,5 @@ expect \"Uploading\"
 expect \"100%\"
 expect \"sftp>\"
 interact"
+
+rm -rf .ssh/known_hosts
