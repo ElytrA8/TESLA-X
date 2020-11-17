@@ -63,8 +63,8 @@ async def on(event):
     bot_time = await get_readable_time(time.time() - uptime)
     await event.delete()
     msg = (
-    '𝘂𝘀𝗲𝗿𝗰𝗼𝗰𝗸\n'
-    '`usercock is up and ready`!\n'
+    '\tuservanced\n'
+    '`uservanced is up and ready`!\n'
     f'`🤖 bot_verison`       {bot_verison} 🤖\n'
     f'`⏱️ bot_uptime`         {bot_time} ⏱️\n'
     f'`🐍 python_version`     {python_version()} 🐍\n'
@@ -248,7 +248,7 @@ help_list.append(
 @bot.on(events.NewMessage(outgoing=True, pattern='^\.sh(?: |$|\n)(.*)'))
 async def shell(sh):
     comm = sh.pattern_match.group(1)
-    user = 'usercock'
+    user = 'uservanced'
     if not comm:
         await sh.edit(f"you didnt specify what command to excute! \n")
         return
@@ -316,7 +316,7 @@ help_list.append("`transfer`:\n upload files to we.tl \n usage: .transfer <url>\
 
 @bot.on(events.NewMessage(outgoing=True, pattern='^.help(?: |$)(.*)'))
 async def help(event):
-    message = 'welcome to usercock modules Helper!\n\n'
+    message = 'welcome to uservanced modules Helper!\n\n'
     for key in help_list:
          message += '¬'
          message += f'{key}'
@@ -329,5 +329,5 @@ try:
 except PhoneNumberInvalidError:
     print(phoneError)
     sys.exit(1)
-print("usercock is now running!!")
+print("uservanced is now running!!")
 bot.run_until_disconnected()
