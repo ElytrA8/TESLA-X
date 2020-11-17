@@ -1,4 +1,4 @@
 telethon
-pyrogram
+wheel
 requests
-pexpect
+
